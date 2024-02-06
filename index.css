@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Bricolage+Grotesque:opsz@12..96&family=Fjalla+One&family=Gabarito&family=Inter&family=Josefin+Sans&family=Lato&family=Lexend&family=Montserrat&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@300&family=Roboto+Condensed:wght@300;400&family=Roboto+Mono&family=Roboto:wght@100;300;400&family=Russo+One&family=Stylish&family=Yantramanav&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Bricolage+Grotesque:opsz@12..96&family=Fjalla+One&family=Gabarito&family=Inter&family=Josefin+Sans&family=Lato&family=Lexend&family=Merriweather&family=Montserrat&family=Open+Sans:wght@300&family=PT+Sans&family=Poppins:wght@300&family=Roboto+Condensed:wght@300;400&family=Roboto+Mono&family=Roboto:wght@100;300;400&family=Russo+One&family=Stylish&family=Yantramanav&family=Young+Serif&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+.navcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(to right, black, gray);
+  position: fi;
+
+  & img {
+    width: 90px;
+  }
+
+  & ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+  }
+
+  & ul li {
+    text-decoration: none;
+    list-style-type: none;
+  }
+  & ul a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s;
+  }
+  & ul a:hover {
+    font-size: 18px;
+    color: orange;
+    text-decoration: underline;
+  }
+  & p {
+    color: black;
+    font-weight: bold;
+  }
+  & p i {
+    color: black;
+  }
+}
+
+.navcontainer2 {
+  display: none;
+  background-color: rgb(88, 82, 82);
+  width: 100%;
+  position: absolute;
+  transition: all 1s;
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  & ul a {
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+  }
+}
+
+@keyframes movenavbar {
+  from {
+    display: none;
+    left: 0px;
+  }
+  to {
+    display: grid;
+    left: 200px;
+  }
+}
+
+.hamburger {
+  display: none; /* flex */
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 160px;
+  height: 100px;
+  margin-left: -80px;
+  margin-top: -50px;
+  border-radius: 5px;
+  background: #1e3f57;
+  animation: dot1_ 3s cubic-bezier(0.55, 0.3, 0.24, 0.99) infinite;
+}
+
+.loader:nth-child(2) {
+  z-index: 11;
+  width: 150px;
+  height: 90px;
+  margin-top: -45px;
+  margin-left: -75px;
+  border-radius: 3px;
+  background: #3c517d;
+  animation-name: dot2_;
+}
+
+.loader:nth-child(3) {
+  z-index: 12;
+  width: 40px;
+  height: 20px;
+  margin-top: 50px;
+  margin-left: -20px;
+  border-radius: 0 0 5px 5px;
+  background: #6bb2cd;
+  animation-name: dot3_;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: 40px; */
+  gap: 40px;
+  & .cards {
+    width: 1100px;
+    height: 280px;
+    /* border: 2px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    /* margin: 0px auto; */
+    /* text-align: justify; */
+    display: flex;
+    column-gap: 30px;
+    padding: 20px;
+  }
+
+  & .cards img {
+    width: 350px;
+    height: 280px;
+    transition: all 0.5s;
+  }
+
+  & .cards img:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  & .cards .right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  & .cards .right-content h3 {
+    color: black;
+    font-weight: 900;
+    /* text-shadow: 3px 3px 30px black; */
+    font-family: "Merriweather", serif;
+  }
+
+  & .cards .right-content p {
+    color: black;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  & .cards .right-content .author {
+    background-color: #65d0e1;
+    width: 20%;
+    color: #e5f7fa;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  & .publish {
+    background-color: #1a73e8;
+    width: 25%;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+}
+
+@keyframes dot1_ {
+  3%,
+  97% {
+    width: 160px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -80px;
+  }
+
+  30%,
+  36% {
+    width: 80px;
+    height: 120px;
+    margin-top: -60px;
+    margin-left: -40px;
+  }
+
+  63%,
+  69% {
+    width: 40px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -20px;
+  }
+}
+
+@keyframes dot2_ {
+  3%,
+  97% {
+    height: 90px;
+    width: 150px;
+    margin-left: -75px;
+    margin-top: -45px;
+  }
+
+  30%,
+  36% {
+    width: 70px;
+    height: 96px;
+    margin-left: -35px;
+    margin-top: -48px;
+  }
+
+  63%,
+  69% {
+    width: 32px;
+    height: 60px;
+    margin-left: -16px;
+    margin-top: -30px;
+  }
+}
+
+@keyframes dot3_ {
+  3%,
+  97% {
+    height: 20px;
+    width: 40px;
+    margin-left: -20px;
+    margin-top: 50px;
+  }
+
+  30%,
+  36% {
+    width: 8px;
+    height: 8px;
+    margin-left: -5px;
+    margin-top: 49px;
+    border-radius: 8px;
+  }
+
+  63%,
+  69% {
+    width: 16px;
+    height: 4px;
+    margin-left: -8px;
+    margin-top: -37px;
+    border-radius: 10px;
+  }
+}
+
+.container {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .navcontainer ul {
+    display: none;
+  }
+  .navcontainer p {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  .news-container .cards {
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 600px;
+  }
+  .cards .right-content {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .news-container .cards {
+    width: 600px;
+    height: 700px;
+  }
+  .cards img {
+    width: 100px;
+  }
+
+  .cards .right-content {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .news-container .cards {
+    width: 500px;
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards img {
+    width: 50px;
+  }
+  .news-container .cards {
+    width: 450px;
+    height: 650px;
+  }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technology</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navcontainer">
+        <img src="/News/images/logo.png" alt="Logo" />
+
+        <ul>
+          <a href="/News/index.html" id="home"
+            ><li><span>Home </span></li></a
+          >
+          <a href="/News/technology.html" id="technology"
+            ><li><span>Technology</span></li></a
+          >
+          <a href="/News/sports.html" id="sports"
+            ><li><span>Sports</span></li></a
+          >
+          <a href="/News/science.html" id="science"
+            ><li><span>Science</span></li></a
+          >
+          <a href="/News/entertainment.html" id="entertainment"
+            ><li><span>Entertainment</span></li></a
+          >
+          <a href="/News/health.html" id="health"
+            ><li><span>Health</span></li></a
+          >
+        </ul>
+
+        <!-- <p>
+          <i
+            class="fa-solid fa-magnifying-glass fa-sm"
+            style="color: #f0f2f5"
+          ></i>
+          Search
+        </p> -->
+
+        <div class="hamburger" id="ham">
+          <div id="first"></div>
+          <div id="second"></div>
+          <div id="third"></div>
+        </div>
+      </div>
+
+      <div class="navcontainer2">
+        <ul>
+          <a href="#"
+            ><li><span>Home </span></li></a
+          >
+          <a href="#"
+            ><li><span>Technology</span></li></a
+          >
+          <a href="#"
+            ><li><span>Sports</span></li></a
+          >
+          <a href="#"
+            ><li><span>Science</span></li></a
+          >
+          <a href="#"
+            ><li><span>Entertainment</span></li></a
+          >
+          <a href="#"
+            ><li><span>Health</span></li></a
+          >
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="news-container">
+        <!-- <div class="cards">
+          <img src="/News/images/logo.png" alt="cardimage" />
+
+          <div class="right-content">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+              dicta debitis iusto, eaque id provident quis est voluptatibus.
+              Praesentium ratione dolor officia atque velit dicta mollitia? Iure
+              aliquam eius1
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
+              voluptates natus quibusdam eligendi voluptas possimus odit
+              explicabo doloremque dolor maxime quos neque velit, molestiae nisi
+              fugiat dicta maiores ipsam placeat!
+            </p>
+          </div>
+        </div> -->
+        <div class="container" id="loading">
+          <div class="loader"></div>
+          <div class="loader"></div>
+          <div class="loader"></div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/dcd4fa15c1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/News/technology.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      // console.log(window.location.pathname);
+      let path = window.location.pathname;
+      if (path == "/News/technology.html") {
+        document.getElementById("technology").style.backgroundColor = "gray";
+        document.getElementById("technology").style.color = "black";
+        document.getElementById("technology").style.padding = "20px";
+      } else if (path == "/News/index.html") {
+        document.getElementById("home").style.backgroundColor = "gray";
+        document.getElementById("home").style.color = "black";
+        document.getElementById("home").style.padding = "20px";
+      } else if (path == "/News/sports.html") {
+        document.getElementById("sports").style.backgroundColor = "gray";
+        document.getElementById("sports").style.color = "black";
+        document.getElementById("sports").style.padding = "20px";
+      } else if (path == "/News/science.html") {
+        document.getElementById("science").style.backgroundColor = "gray";
+        document.getElementById("science").style.color = "black";
+        document.getElementById("science").style.padding = "20px";
+      } else if (path == "/News/entertainment.html") {
+        document.getElementById("entertainment").style.backgroundColor = "gray";
+        document.getElementById("entertainment").style.color = "black";
+        document.getElementById("entertainment").style.padding = "20px";
+      } else if (path == "/News/health.html") {
+        document.getElementById("health").style.backgroundColor = "gray";
+        document.getElementById("health").style.color = "black";
+        document.getElementById("health").style.padding = "20px";
+      }
+    </script>
+  </body>
+</html>
